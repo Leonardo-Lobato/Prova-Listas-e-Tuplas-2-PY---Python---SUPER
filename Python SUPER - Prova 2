@@ -1,0 +1,26 @@
+digitos = []
+print("Digite 10 números:")
+
+for i in range(10):
+    numero = int(input(f"Digite o número {i + 1}: "))
+    digitos.append(numero)
+
+par = [num for num in digitos if num % 2 == 0]
+impar = [num for num in digitos if num % 2 != 0]
+
+impares_tupla = tuple(impar)
+
+quantidade_par = len(par)
+quantidade_imp = len(impar)
+
+soma_par = sum(par)
+soma_imp = sum(impar)
+
+print(f"Os números pares digitados foram: {par}")
+print(f"Os números ímpares foram: (em tupla): {impares_tupla}")
+
+print(f"Quantidade de números pares: {quantidade_par}")
+print(f"Quantidade de números ímpares: {quantidade_imp}")
+
+print(f"Soma dos números pares: {soma_par}")
+print(f"Soma dos números ímpares: {soma_imp}")
